@@ -1,0 +1,33 @@
+---
+import Slide from "../components/Slide.astro";
+---
+
+<Slide>
+	<h2>Rajakumar (2014)</h2>
+	<p class="muted" style="margin-bottom: 0.6em">
+		Application : identifier les paramètres d'un système bilinéaire
+	</p>
+	<div class="step-grid-single">
+		<div class="step-item-big">
+			<div class="step-num">1</div>
+			<div>
+				<span class="op-name">Initialisation</span><br/>
+				<span>1 mâle ♂, 1 femelle ♀, 2 nomades : solutions aléatoires dans l'espace des paramètres</span>
+			</div>
+		</div>
+		<div class="step-item-big">
+			<div class="step-num">2</div>
+			<div>
+				<span class="op-name">Fertilité</span><br/>
+				<span>Détecte si le mâle ou la femelle stagne. Si oui, force une mutation pour en sortir avant d'aller plus loin.</span>
+			</div>
+		</div>
+		<div class="step-item-big">
+			<div class="step-num">3</div>
+			<div>
+				<span class="op-name">Accouplement</span><br/>
+				<span>Croisement uniforme entre ♂ et ♀ -> 4 oursons, puis mutation aléatoire sur chacun</span>
+			</div>
+		</div>
+	</div>
+</Slide>

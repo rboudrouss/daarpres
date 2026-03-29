@@ -34,7 +34,7 @@
 
 .muted {
   color: #888;
-  font-size: 0.85em;
+  font-size: 0.7em;
 }
 
 .tag {
@@ -68,13 +68,13 @@
   border-radius: 8px;
   padding: 0.5em 0.8em;
   margin-bottom: 0.4em;
-  font-size: 0.8em;
+  font-size: 0.5em;
 }
 
 .card .card-title {
   color: var(--lion-gold);
   font-weight: bold;
-  font-size: 1em;
+  font-size: 0.8em;
   margin-bottom: 0.3em;
 }
 
@@ -225,7 +225,7 @@
 .results-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.68em;
+  font-size: 0.6em;
   margin-top: 0.4em;
 }
 
@@ -278,13 +278,227 @@
 .tradeoff-box ul { margin: 0; padding-left: 1.2em; color: #ccc; }
 .tradeoff-box li { margin-bottom: 0.3em; }
 
+/* ── Bio list (accroche slide) ──────────────────────────────── */
+.bio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.bio-item {
+  font-size: 0.72em;
+  color: #ccc;
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+}
+
+.bio-item span { margin-left: 0.3em; }
+
+.highlight-item {
+  background: rgba(230, 168, 23, 0.12);
+  border: 1px solid rgba(230, 168, 23, 0.4);
+  color: var(--lion-gold);
+  font-weight: bold;
+}
+
+/* ── Op list (idée générale) ────────────────────────────────── */
+.op-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  padding: 0.35em 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 0.72em;
+  color: #ddd;
+}
+
+.op-list-item:last-child { border-bottom: none; }
+.op-list-item .op-icon { font-size: 1.3em; flex-shrink: 0; }
+
+/* ── Role grid (idée générale) ──────────────────────────────── */
+.role-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35em 0.6em;
+}
+
+.role-card {
+  border-radius: 8px;
+  padding: 0.3em 0.6em;
+  font-size: 0.6em;
+}
+
+.role-card.pride {
+  background: rgba(230, 168, 23, 0.08);
+  border: 1px solid rgba(230, 168, 23, 0.35);
+}
+
+.role-card.nomad {
+  background: rgba(192, 57, 43, 0.08);
+  border: 1px solid rgba(192, 57, 43, 0.35);
+}
+
+.role-header {
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 0.1em;
+}
+
+.pride .role-header { color: var(--lion-gold); }
+.nomad .role-header { color: #e07060; }
+
+.role-tag {
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-bottom: 0.2em;
+}
+
+.pride .role-tag {
+  background: rgba(230, 168, 23, 0.2);
+  color: var(--lion-gold);
+}
+
+.nomad .role-tag {
+  background: rgba(192, 57, 43, 0.2);
+  color: #e07060;
+}
+
+.role-card p {
+  margin: 0;
+  color: #bbb;
+  line-height: 1.4;
+}
+
+/* ── Representation slide ───────────────────────────────────── */
+.repr-code {
+  font-family: "Fira Code", "Consolas", monospace;
+  font-size: 0.54em;
+  background: #1e1e2e;
+  border: 1px solid rgba(230, 168, 23, 0.2);
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  color: #cdd6f4;
+  line-height: 1.7;
+  margin: 0;
+  white-space: pre;
+}
+
+.repr-verdict {
+  font-size: 0.7em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.verdict-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #ccc;
+}
+
+.verdict-label {
+  font-weight: bold;
+  min-width: 5em;
+}
+
+.verdict-label.strong { color: #2ecc71; }
+.verdict-label.weak   { color: #e74c3c; }
+
+/* ── Step grid (Rajakumar slide) ────────────────────────────── */
+.step-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45em 1.2em;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  font-size: 0.68em;
+  color: #ccc;
+}
+
+/* Step list (single column, larger — for split Rajakumar slides) */
+.step-grid-single {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.step-item-big {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8em;
+  font-size: 0.64em;
+  color: #ccc;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--lion-gold);
+  padding: 0.5em 0.7em;
+  border-radius: 0 6px 6px 0;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  background: var(--lion-gold);
+  color: #1a1a2e;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  margin-top: 0.1em;
+}
+
+/* ── Critique table (bilan slide) ───────────────────────────── */
+.critique-table {
+  font-size: 0.6em;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.critique-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8em;
+  font-weight: bold;
+  color: var(--lion-gold);
+  padding: 0.2em 0.5em;
+  border-bottom: 2px solid rgba(230, 168, 23, 0.4);
+  margin-bottom: 0.1em;
+}
+
+.critique-header div:last-child { color: #2ecc71; }
+
+.critique-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8em;
+  padding: 0.22em 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  color: #ccc;
+}
+
+.critique-row div:first-child { color: #e74c3c; }
+.critique-row div:last-child  { color: #ccc; }
+
 /* ── Final slide ────────────────────────────────────────────── */
 .final-slide { text-align: center; }
 
 .final-slide .big {
-  font-size: 1em;
+  font-size: 0.8em;
   color: #eee;
-  margin: 0.3em 0;
+  margin: 0.25em 0;
 }
 
 .final-slide .refs {

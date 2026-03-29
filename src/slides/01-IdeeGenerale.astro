@@ -1,0 +1,32 @@
+---
+import Slide from "../components/Slide.astro";
+---
+
+<Slide>
+	<h2>L'idée générale</h2>
+	<p class="muted" style="margin-bottom: 0.3em">
+		Chaque <span class="highlight">lion = une solution candidate</span>. Son rôle détermine comment il explore l'espace
+	</p>
+	<div class="role-grid">
+		<div class="role-card pride">
+			<div class="role-header">♀ Femelle résidente</div>
+			<div class="role-tag">Exploitation</div>
+			<p>Chase en groupe, encercle la meilleure solution connue. Moteur principal de la convergence.</p>
+		</div>
+		<div class="role-card pride">
+			<div class="role-header">♂ Mâle résident</div>
+			<div class="role-tag">Exploitation locale</div>
+			<p>Patrouille dans le territoire de sa fierté. Recherche locale fine autour des bonnes zones.</p>
+		</div>
+		<div class="role-card nomad">
+			<div class="role-header">♀ Femelle nomade</div>
+			<div class="role-tag">Transition</div>
+			<p>Expulsée ou migrante. Se déplace aléatoirement, peut rejoindre une fierté et apporter de la diversité.</p>
+		</div>
+		<div class="role-card nomad">
+			<div class="role-header">♂ Mâle nomade</div>
+			<div class="role-tag">Exploration globale</div>
+			<p>Erre dans tout l'espace. Peut défier le mâle résident. Si plus fort, prend sa place dans la fierté.</p>
+		</div>
+	</div>
+</Slide>
