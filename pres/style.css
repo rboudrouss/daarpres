@@ -1,0 +1,297 @@
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  --lion-gold: #e6a817;
+  --lion-dark: #1a1a2e;
+  --lion-accent: #c0392b;
+}
+
+/* ── Base ───────────────────────────────────────────────────── */
+.reveal {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--lion-gold);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.reveal h1 { font-size: 1.8em; }
+.reveal h2 { font-size: 1.3em; }
+
+.reveal section { text-align: left; }
+.reveal section.center-slide { text-align: center; }
+
+.reveal .progress { color: var(--lion-gold); }
+
+/* ── Utility ────────────────────────────────────────────────── */
+.highlight {
+  color: var(--lion-gold);
+  font-weight: bold;
+}
+
+.muted {
+  color: #888;
+  font-size: 0.85em;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--lion-gold);
+  color: #1a1a2e;
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-size: 0.55em;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* ── Layout ─────────────────────────────────────────────────── */
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+  align-items: start;
+}
+
+.cols.wide {
+  grid-template-columns: 1.4fr 1fr;
+}
+
+/* ── Cards ──────────────────────────────────────────────────── */
+.card {
+  background: rgba(230, 168, 23, 0.08);
+  border: 1px solid rgba(230, 168, 23, 0.3);
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  margin-bottom: 0.6em;
+  font-size: 0.8em;
+}
+
+.card .card-title {
+  color: var(--lion-gold);
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 0.3em;
+}
+
+.card p {
+  margin: 0;
+  color: #ccc;
+}
+
+/* ── Title slide ────────────────────────────────────────────── */
+.title-slide {
+  text-align: center;
+}
+
+.title-slide .emoji-lion {
+  font-size: 3em;
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+.title-slide h1 {
+  font-size: 1.6em;
+  margin-bottom: 0.2em;
+}
+
+.title-slide .subtitle {
+  color: #aaa;
+  font-size: 0.7em;
+}
+
+/* ── Population diagram ─────────────────────────────────────── */
+.pop-diagram {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0.5em 0;
+}
+
+.pride-box,
+.nomad-box {
+  border-radius: 10px;
+  padding: 0.6em 1em;
+  text-align: center;
+  flex: 1;
+  font-size: 0.7em;
+}
+
+.pride-box {
+  background: rgba(230, 168, 23, 0.12);
+  border: 2px solid var(--lion-gold);
+}
+
+.nomad-box {
+  background: rgba(192, 57, 43, 0.15);
+  border: 2px solid var(--lion-accent);
+}
+
+.box-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 0.4em;
+}
+
+.pride-box .box-title { color: var(--lion-gold); }
+.nomad-box .box-title { color: var(--lion-accent); }
+
+.lion-icon { font-size: 1.5em; }
+.pop-label { color: #aaa; font-size: 0.65em; margin-top: 0.3em; }
+
+/* ── Hunting diagram ────────────────────────────────────────── */
+.hunt-diagram {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto;
+}
+
+.hunt-circle {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.prey {
+  width: 60px;
+  height: 60px;
+  background: rgba(192, 57, 43, 0.8);
+  border: 2px solid #e74c3c;
+  top: 100px;
+  left: 100px;
+  color: white;
+  font-size: 0.6em;
+}
+
+.hunter {
+  width: 44px;
+  height: 44px;
+  background: rgba(230, 168, 23, 0.8);
+  border: 2px solid var(--lion-gold);
+  color: #1a1a2e;
+  font-size: 0.5em;
+}
+
+.h-top   { top: 10px;  left: 108px; }
+.h-bot   { top: 200px; left: 108px; }
+.h-left  { top: 108px; left: 10px;  }
+.h-right { top: 108px; left: 200px; }
+.h-tl    { top: 40px;  left: 40px;  }
+.h-tr    { top: 40px;  left: 170px; }
+.h-bl    { top: 170px; left: 40px;  }
+.h-br    { top: 170px; left: 170px; }
+
+.hunt-label {
+  text-align: center;
+  font-size: 0.6em;
+  color: #aaa;
+  margin-top: 0.3em;
+}
+
+/* ── Operator list ──────────────────────────────────────────── */
+.op-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.op-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  padding: 0.45em 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 0.75em;
+  color: #ddd;
+}
+
+.op-list li:last-child { border-bottom: none; }
+
+.op-list .op-icon { font-size: 1.3em; flex-shrink: 0; }
+.op-list .op-name { color: var(--lion-gold); font-weight: bold; }
+
+/* ── Results table ──────────────────────────────────────────── */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.68em;
+  margin-top: 0.4em;
+}
+
+.results-table th {
+  background: rgba(230, 168, 23, 0.2);
+  color: var(--lion-gold);
+  padding: 0.5em 0.8em;
+  text-align: left;
+  border-bottom: 2px solid var(--lion-gold);
+}
+
+.results-table td {
+  padding: 0.45em 0.8em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ccc;
+}
+
+.results-table .win  { color: #2ecc71; font-weight: bold; }
+.results-table .lose { color: #e74c3c; }
+.results-table .eq   { color: #f39c12; }
+
+/* ── Tradeoff boxes ─────────────────────────────────────────── */
+.tradeoff {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+
+.tradeoff-box {
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  font-size: 0.75em;
+}
+
+.pros {
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid rgba(46, 204, 113, 0.4);
+}
+
+.cons {
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.4);
+}
+
+.tradeoff-box h3 { font-size: 1em; margin: 0 0 0.5em 0; }
+.pros h3 { color: #2ecc71; }
+.cons h3 { color: #e74c3c; }
+
+.tradeoff-box ul { margin: 0; padding-left: 1.2em; color: #ccc; }
+.tradeoff-box li { margin-bottom: 0.3em; }
+
+/* ── Final slide ────────────────────────────────────────────── */
+.final-slide { text-align: center; }
+
+.final-slide .big {
+  font-size: 1.1em;
+  color: #eee;
+  margin: 0.5em 0;
+}
+
+.final-slide .refs {
+  font-size: 0.5em;
+  color: #666;
+  margin-top: 1.5em;
+  text-align: left;
+  border-top: 1px solid #333;
+  padding-top: 0.8em;
+}

@@ -1,0 +1,31 @@
+<section>
+  <h2>Bilan critique</h2>
+  <div class="tradeoff">
+    <div class="tradeoff-box pros">
+      <h3>Forces</h3>
+      <ul>
+        <li>Bon équilibre exploration / exploitation</li>
+        <li>Multi-fiertés → adapté aux problèmes multi-modaux</li>
+        <li>OBL dans la chasse → diversité locale</li>
+        <li>Tournoi adaptatif → pas de réglage manuel</li>
+      </ul>
+    </div>
+    <div class="tradeoff-box cons">
+      <h3>Limites</h3>
+      <ul>
+        <li>Nombreux hyperparamètres (%N, %S, %Ma, %R…)</li>
+        <li>Coût calculatoire élevé (évaluation fitness fréquente)</li>
+        <li>Peu de benchmarks large-scale publiés</li>
+        <li>Sensible au réglage des prides (P)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="margin-top: 1em; font-size: 0.72em">
+    <div class="card-title">Analogie algorithmique</div>
+    <p>
+      Chaque fierté ≈ un <strong>thread</strong> qui explore une région.
+      La défense ≈ une <strong>mutation globale</strong>.
+      La migration ≈ un <strong>crossover inter-populations</strong>.
+    </p>
+  </div>
+</section>
