@@ -1,0 +1,42 @@
+---
+import Slide from "../components/Slide.astro";
+---
+
+<Slide>
+	<h2>Opérateur 1 — La Chasse <span class="tag">Exploitation</span></h2>
+	<div class="cols wide">
+		<div>
+			<p style="font-size: 0.75em; color: #ccc; margin-bottom: 0.8em">
+				Dans chaque fierté, les femelles chassent en groupe et
+				<strong>encerclent la proie</strong> depuis 3 positions
+				(aile gauche, centre, aile droite).
+			</p>
+			<div class="card">
+				<div class="card-title">Opposition-Based Learning (OBL)</div>
+				<p>
+					Certaines chasseuses attaquent depuis la position <em>opposée</em>
+					→ explore les deux côtés de l'espace local simultanément
+				</p>
+			</div>
+			<div class="card">
+				<div class="card-title">Proie dynamique</div>
+				<p>
+					Si une chasseuse améliore son fitness, la proie s'échappe
+					proportionnellement → pression sélective continue
+				</p>
+			</div>
+		</div>
+		<div>
+			<div class="hunt-diagram">
+				<div class="hunt-circle prey">Proie</div>
+				<div class="hunt-circle hunter h-top">Centre</div>
+				<div class="hunt-circle hunter h-bot">Centre</div>
+				<div class="hunt-circle hunter h-left">Aile G</div>
+				<div class="hunt-circle hunter h-right">Aile D</div>
+				<div class="hunt-circle hunter h-tl" style="font-size: 0.4em">OBL</div>
+				<div class="hunt-circle hunter h-br" style="font-size: 0.4em">OBL</div>
+			</div>
+			<div class="hunt-label">Encerclement multi-directionnel</div>
+		</div>
+	</div>
+</Slide>

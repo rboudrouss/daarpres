@@ -1,0 +1,17 @@
+---
+interface Props {
+  /**
+   * Use the auto-animate feature for this slide or not
+   *
+   * default: true
+   */
+  animate?: boolean;
+  class?: string;
+}
+
+const { animate = true, class: className } = Astro.props;
+---
+
+<section data-auto-animate={animate} class={className}>
+  <slot />
+</section>

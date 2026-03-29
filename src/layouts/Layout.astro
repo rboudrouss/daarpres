@@ -1,0 +1,41 @@
+---
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+
+		<title>{title}</title>
+	</head>
+
+	<body>
+		<slot />
+
+		<script>
+			import Reveal from "reveal.js";
+
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+				progress: true,
+				transition: "slide",
+				transitionSpeed: "fast",
+				controls: true,
+				center: false,
+				autoAnimateDuration: 0.5,
+				autoAnimateEasing: "cubic-bezier(0.4, 0, 0.2, 1)",
+			});
+		</script>
+	</body>
+</html>
+
+<style is:global lang="scss">
+	@import "reveal.js/dist/reveal.css";
+	@import "reveal.js/dist/theme/black.css";
+	@import "../styles/lion-theme.css";
+</style>
