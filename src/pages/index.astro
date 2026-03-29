@@ -1,24 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Title from "../slides/Title.astro";
-import Population from "../slides/Population.astro";
-import Hunting from "../slides/Hunting.astro";
-import Defense from "../slides/Defense.astro";
-import Results from "../slides/Results.astro";
-import Bilan from "../slides/Bilan.astro";
-import Conclusion from "../slides/Conclusion.astro";
+
+const slideModules = Object.values(
+	import.meta.glob<{ default: any }>("../slides/*.astro", { eager: true })
+);
 ---
 
 <Layout title="Lion Optimization Algorithm">
 	<main class="reveal">
 		<div class="slides">
-			<Title />
-			<Population />
-			<Hunting />
-			<Defense />
-			<Results />
-			<Bilan />
-			<Conclusion />
+			{slideModules.map(({ default: Slide }) => <Slide />)}
 		</div>
 	</main>
 </Layout>
