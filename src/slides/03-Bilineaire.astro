@@ -1,0 +1,54 @@
+---
+import Slide from "../components/Slide.astro";
+---
+
+<Slide>
+	<h2>Identification bilinéaire</h2>
+	<p class="muted" style="margin-bottom: 0.5em">
+		Contexte d'application de Rajakumar : retrouver un système à partir de ses
+		entrées/sorties
+	</p>
+	<div class="cols" style="gap: 1em; align-items: start">
+		<div>
+			<div class="card" style="margin-bottom: 0.5em">
+				<div class="card-title">Un système bilinéaire</div>
+				<p>
+					Modèle ARMA étendu : prédit la sortie courante <code>y(n)</code> à partir
+					des sorties et entrées passées, plus leurs <strong
+						>produits croisés</strong
+					> :
+				</p>
+				<pre
+					class="repr-code"
+					style="margin-top: 0.5em">y(n) = Σ a·y(n-k)          ← sorties passées
+     + Σ b·u(n-k)          ← entrées passées
+     + Σ c·y(n-ki)·u(n-kj) ← terme bilinéaire</pre>
+			</div>
+			<div class="card" style="margin-bottom: 0">
+				<div class="card-title">Ce qu'on cherche</div>
+				<p>
+					Les <strong>kernels</strong> a, b, c… (jusqu'à 1023) qui font coller le
+					modèle au vrai système. On ne connaît que les signaux d'entrée et de sortie.
+				</p>
+			</div>
+		</div>
+		<div>
+			<div class="card" style="margin-bottom: 0.5em">
+				<div class="card-title">Formulé comme une optimisation</div>
+				<p>Minimiser l'erreur entre sortie modèle et sortie réelle :</p>
+				<pre
+					class="repr-code"
+					style="margin-top: 0.5em">min Σ ( y_modèle - y_réel )²
+ ↑
+chaque lion = un jeu de kernels candidats</pre>
+			</div>
+			<div class="card" style="margin-bottom: 0">
+				<div class="card-title">Standard vs grande échelle</div>
+				<p>
+					<strong>Standard</strong> : nombre réduit de kernels (N et M petits).<br />
+					<strong>Grande échelle</strong> : N = 31, M = 31 donc 1023 kernels. (N=31 sorties seuls, M=31 entrées seuls et 31*31 combinaisons d'entrées sorties)
+				</p>
+			</div>
+		</div>
+	</div>
+</Slide>

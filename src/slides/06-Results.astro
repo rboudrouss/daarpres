@@ -33,14 +33,13 @@ import Slide from "../components/Slide.astro";
 	</table>
 	<div class="cols" style="margin-top: 0.4em; gap: 0.8em">
 		<div class="card" style="margin-bottom: 0">
-			<div class="card-title">Système bilinéaire</div>
-			<p>Modèle non-linéaire : <code>y = ax + bu + <strong>cxu</strong></code>. Le terme produit <em>xu</em> rend le système complexe. On cherche les <strong>kernels</strong> (coefficients) qui minimisent l'erreur entre la sortie du modèle et la sortie réelle.</p>
+			<div class="card-title">Modèle standard (35 kernels)</div>
+			<p>LA domine en minimisation d'erreur sur toutes les mesures (best, worst, mean, median). Il effectue plus d'évaluations que GA mais moins que DE.</p>
 		</div>
 		<div class="card" style="margin-bottom: 0">
-			<div class="card-title">Standard vs grande échelle</div>
-			<!-- LA grande échelle perd son avantage : population de 4 lions trop petite pour couvrir 1023 dimensions -->
-			<p><strong>Standard</strong> : quelques dizaines de kernels à trouver.<br/>
-			<strong>Grande échelle</strong> : 1023 kernels : même système, modélisé avec bien plus de précision → espace de recherche bien plus grand.</p>
+			<div class="card-title">Grande échelle (1023 kernels)</div>
+			<p>GA échoue dans tous les cas. LA et DE s'équivalent : LA excelle en <em>cohérence</em> (écart-type minimal), DE obtient de meilleures convergences moyennes.</p>
 		</div>
 	</div>
 </Slide>
+

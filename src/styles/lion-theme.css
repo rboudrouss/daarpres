@@ -426,7 +426,7 @@
   color: #ccc;
 }
 
-/* Step list (single column, larger — for split Rajakumar slides) */
+/* Step list (single column, larger for split Rajakumar slides) */
 .step-grid-single {
   display: flex;
   flex-direction: column;
